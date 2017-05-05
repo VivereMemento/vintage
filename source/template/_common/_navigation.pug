@@ -1,0 +1,28 @@
+nav.nav
+	.nav__left
+		.logo
+			a.logo__link(href="#")
+				+logo
+				
+	- var items = ["Рус","Укр", "Eng"];
+	#language-menu.language.nav__language_mods
+		ul.language__list
+			each item in items
+				li(class="language__item" + ((item == "Рус") ? ' ' + 'active' : ''))
+					a(href="#" class="language__link") #{item}
+
+	.nav__right
+		- var items = ["Укр", "Eng"];
+		#language-nav.language
+			.language__current Рус
+			ul.language__list
+				each item in items
+					li(class="language__item" + ((item == "Рус") ? ' ' + 'active' : ''))
+						a(href="#" class="language__link") #{item}
+
+		-var triggers = ["trigger__line-1", "trigger__line-2", "trigger__line-3"]
+		.trigger
+			.trigger__text Меню
+			.trigger__lines
+				each trigger in triggers
+					div(class="trigger__line " + trigger)

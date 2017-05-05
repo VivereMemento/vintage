@@ -1,0 +1,66 @@
+.social {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    opacity: 0;
+
+    &__list {
+        width: 80px;
+        margin: 0 auto;
+        line-height: 0;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+    }
+
+    &__item {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        display: block;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            @include absolute-center;
+        }
+
+        &:after {
+            @include sprite($tw);
+        }
+
+        &_fb:after {
+            @include sprite($fb);
+        }
+
+        &_vk:after {
+            @include sprite($vk);
+        }
+
+        &:hover.social__link_tw:after{
+            @include sprite($tw_hover);
+        }
+
+        &:hover.social__link_fb:after{
+            @include sprite($fb_hover);
+        }
+
+        &:hover.social__link_vk:after{
+            @include sprite($vk_hover);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.social
+    - 
+        var items = [
+            {name: "Twitter", link: "https://twitter.com", mods: 'tw'},
+            {name: "Facebook", link: "https://facebook.com", mods: 'fb'},
+            {name: "Instagram", link: "https://vk.com", mods: 'vk'}
+        ]
+    ul.social__list
+        each item in items
+            li(class="social__item" + ((item == "Наш блог") ? ' ' + 'active' : ''))
+                a(class="social__link social__link_" + item.mods href="" + item.link target="_blank") #{item.name}

@@ -1,0 +1,9 @@
+.menu
+	-
+		var MENU = ["Главная", "Портфолио", "О Виктории", "Услуги", "Пресса", "Контакты"];
+	ul.menu__list
+		each item in MENU
+			li(class="menu__item" + ((item == "Главная") ? ' ' + 'active' : ''))
+				a(href="#" class="menu__link") #{item}
+
+	include ./_social

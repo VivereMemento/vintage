@@ -1,0 +1,69 @@
+$responsive: true;
+
+/* --------- variables --------- */
+$ffTI: "Times New Roman Italic" serif;
+
+$red: #a7627f;
+$black: #343230;
+
+/* --------- common classes --------- */
+
+.st0 {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    fill:#A86280;
+}
+.st1 {
+    fill:#010202;
+}
+
+.play0{
+    fill:#FFFFFF;
+}
+.play1{
+    fill:#A7627F;
+}
+
+.mouse0{
+    fill:none;
+    stroke: $red;
+    stroke-width:2;
+}
+.mouse1{
+    fill: $red;
+    animation: flash 1s ease-in infinite;
+}
+
+@keyframes flash {
+	0% {
+		cy: 16;
+        opacity: 0
+	}
+
+	50% {
+        opacity: 1
+	}
+
+    100% {
+        cy: 30;
+        opacity: 0;
+    }
+}
+
+/* --------- adjustment --------- */
+
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/adjustment";
+@import "_misc/_sprite";
+
+/* --------- common --------- */
+
+@import "_common/_header";
+@import "_common/_navigation";
+@import "_common/_menu";
+@import "_common/_social";
+@import "_common/_logo";
+
+/* --------- sections --------- */
+// @import "_sections/**/*";
